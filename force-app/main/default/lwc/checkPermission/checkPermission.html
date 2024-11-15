@@ -1,13 +1,22 @@
 <template>
     <lightning-card title="USER Permission Demo">
         <div class="slds-var-m-around_medium">
-
-        <template if:true={hasViewAllDataAvailable}>
-            <p>Hurray! I have user permissions.</p>
-        </template>
-        <template if:false={hasViewAllDataAvailable}>
-            <p>Oops. I don't have user permissions.</p>
-        </template>
+            <template if:true={hasViewAllDataAvailable}>
+                <p>Hurray! I have user permissions.</p>
+            </template>
+            <template if:false={hasViewAllDataAvailable}>
+                <p>Oops. I don't have user permissions.</p>
+            </template>
+        </div>
+    </lightning-card>
+    <lightning-card title="CUSTOM Permission Demo">
+        <div class="slds-var-m-around_medium">
+            <template if:true={hasCustomPermission}>
+                <p>Hurray! I have CUSTOM permissions.</p>
+            </template>
+            <template if:false={hasCustomPermission}>
+                <p>Oops. I don't have CUSTOM permissions.</p>
+            </template>
         </div>
     </lightning-card>
 </template>
